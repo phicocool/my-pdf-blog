@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 标题将由JS动态设置 -->
     <title>正在加载文章...</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,7 +15,6 @@
     
     <header class="main-header">
         <div class="container">
-             <!-- 标题将由JS动态设置 -->
             <h1 id="dynamic-header-title">文章详情</h1>
         </div>
     </header>
@@ -30,12 +28,13 @@
     </nav>
 
     <main class="container">
+        <!-- 这个下载按钮现在应该能正常显示和工作了 -->
         <button id="download-pdf-btn" class="download-btn">下载为 PDF</button>
 
-        <!-- 文章内容将由JS动态填充到这里 -->
+        <!-- 文章内容容器 -->
         <div id="pdf-content">
             <article id="post-content-container" class="post-content">
-                <!-- 示例: <h2>正在加载...</h2> -->
+                <!-- 文章的HTML内容将由JavaScript注入这里 -->
             </article>
         </div>
     </main>

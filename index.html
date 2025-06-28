@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的博客</title>
+    <title>我的博客 - 首页</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- 引入农历转换库 -->
+    <script src="https://unpkg.com/lunar-calendar@0.1.4/lunar-calendar.js"></script>
 </head>
 <body id="page-index">
-    <!-- 身份验证脚本，必须放在最前面 -->
+    <!-- 身份验证脚本 -->
     <script src="js/auth.js"></script>
 
     <header class="main-header">
@@ -17,7 +19,6 @@
         </div>
     </header>
 
-    <!-- 新增的导航栏 -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html">首页</a>
@@ -26,14 +27,42 @@
         </div>
     </nav>
 
-    <main class="container">
-        <section class="post-list-section">
-            <h2>文章列表</h2>
-            <!-- 文章列表将由JS动态填充到这里 -->
-            <ul id="post-list" class="post-list">
-                <!-- 示例: <p>正在加载文章...</p> -->
-            </ul>
-        </section>
+    <main class="container homepage-grid">
+        <!-- 左侧信息栏 -->
+        <aside class="info-sidebar">
+            <div class="info-card" id="weather-card">
+                <h3>今日天气</h3>
+                <div id="weather-content"><p>加载中...</p></div>
+            </div>
+            <div class="info-card" id="visits-card">
+                <h3>访问统计</h3>
+                <p>本站总计访问 <span id="visit-count">0</span> 次</p>
+            </div>
+             <div class="info-card" id="daily-quote-card">
+                <h3>今日语录</h3>
+                <p id="daily-quote">加载中...</p>
+            </div>
+        </aside>
+
+        <!-- 中间文章列表 -->
+        <div class="post-list-container">
+            <section class="post-list-section">
+                <h2>文章列表</h2>
+                <ul id="post-list" class="post-list"></ul>
+            </section>
+        </div>
+        
+        <!-- 右侧新闻栏 -->
+        <aside class="info-sidebar">
+            <div class="info-card" id="news-china-card">
+                <h3>国内热点</h3>
+                <div id="news-china-content"><p>加载中...</p></div>
+            </div>
+            <div class="info-card" id="news-world-card">
+                <h3>国际热点</h3>
+                <div id="news-world-content"><p>加载中...</p></div>
+            </div>
+        </aside>
     </main>
 
     <footer class="main-footer">
