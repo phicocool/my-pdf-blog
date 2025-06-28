@@ -1,6 +1,6 @@
 // --- 全局设置 ---
 // 在这里设置你的密码
-const ADMIN_PASSWORD = 'gemini'; 
+const ADMIN_PASSWORD = '81843827';
 
 // --- DOMContentLoaded 事件监听器 ---
 // 当整个HTML文档加载和解析完成后运行
