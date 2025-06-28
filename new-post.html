@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布新文章</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 身份验证脚本 -->
+    <script src="js/auth.js"></script>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>发布新文章</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <a href="new-post.html">发布新文章</a>
+            <a href="#" id="logout-btn">退出登录</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <form id="new-post-form" class="post-form">
+            <div class="form-group">
+                <label for="post-title">文章标题</label>
+                <input type="text" id="post-title" required placeholder="在此输入文章标题">
+            </div>
+            <div class="form-group">
+                <label for="post-content">文章HTML内容</label>
+                <textarea id="post-content" rows="20" required placeholder="在此粘贴从Gemini生成的HTML代码..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">发布文章</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 您的名字</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

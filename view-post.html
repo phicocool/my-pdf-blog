@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标题将由JS动态设置 -->
+    <title>正在加载文章...</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 身份验证脚本 -->
+    <script src="js/auth.js"></script>
+    
+    <!-- PDF生成库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <header class="main-header">
+        <div class="container">
+             <!-- 标题将由JS动态设置 -->
+            <h1 id="dynamic-header-title">文章详情</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html">首页</a>
+            <a href="new-post.html">发布新文章</a>
+            <a href="#" id="logout-btn">退出登录</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <button id="download-pdf-btn" class="download-btn">下载为 PDF</button>
+
+        <!-- 文章内容将由JS动态填充到这里 -->
+        <div id="pdf-content">
+            <article id="post-content-container" class="post-content">
+                <!-- 示例: <h2>正在加载...</h2> -->
+            </article>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 您的名字</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
